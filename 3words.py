@@ -5,12 +5,12 @@ import time
 import tweepy
 import urllib.request
 
-consumer_key = "SO1pgugOTbOt8SHnON0nOQ2MZ"
-consumer_secret = "UPr93UtwJ9wuiqCr1PI4xpPRsgTcK2o8LTkvEI09QPcLfDC1Tw"
+consumer_key = ""
+consumer_secret = ""
 
 
-access_token = "873699461469532160-XlKSuTH8RLzWbhmlAfBh4srYVjcPWuP"
-access_token_secret = "Az8bW4R9aYjpNcstPR1rpF1TWi2zcqnGj9cMitgxrZgCz"
+access_token = ""
+access_token_secret = ""
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
@@ -18,10 +18,10 @@ api = tweepy.API(auth)
 
 
 count = 0
-wordnikAPIKey = 'b3a32551a3367171d32c2694d1450ac337ee516eadf61a125'
-w3WAPIKey = 'XHV3G55L'
-googleMapsAPIKey = 'AIzaSyBSsgBYFYRIQer7eQ_XObDz0QK19NDVzrM'
-staticMapAPIKey = 'AIzaSyCXZwf5m5mM6dSa2FCvT63hdRp9JCXT_W8'
+wordnikAPIKey = ''
+w3WAPIKey = ''
+googleMapsAPIKey = ''
+staticMapAPIKey = ''
 # for status in tweepy.Cursor(api.user_timeline).items():
 #     try:
 #         api.destroy_status(status.id)
@@ -94,9 +94,3 @@ while count < 100:
     except json.decoder.JSONDecodeError:
         time.sleep(2)
         print("Funny word 2")
-
-
-# Static api :  AIzaSyCXZwf5m5mM6dSa2FCvT63hdRp9JCXT_W8
-
-# Imgur client id bebc35b91f216da
-# Imgur client secret 6b064c8d344b022d732479c4464dd02339e4f5d8
