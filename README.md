@@ -1,7 +1,11 @@
 # what3wordsTwitterBot
-Three random words are recieved from the wordnik API, those words are then given to what3words' API.
+A call is made to the [wordnik API](http://developer.wordnik.com/docs.html#!/words/getRandomWord_get_4) for three random words
 
-This provides a lat and long, which is then fed to google maps for a static map
+Those words are then given to [what3words' API](https://docs.what3words.com/api/v2/), which provides a latitude and longtitude, 
+
+These are then given to [google maps static API](https://developers.google.com/maps/documentation/static-maps/) for the image
+
+It is then tweeted out
 
 
 This is a work in progress and as such not completed
