@@ -52,6 +52,7 @@ while count < 100:
         words.append(word['word'])
 
 
+    # words = ['swaps','string','bland']
     r = requests.get("https://api.what3words.com/v2/autosuggest?addr=" + ".".join(words) + "&key=" + w3WAPIKey + "&lang=en&format=json&display=full")
 
     try:
@@ -79,7 +80,7 @@ while count < 100:
             tweet = str('Words : '+ ', '.join(x['words'].split('.')) + '\nPlace : ' + x['place'] + ', Country : ' + x['country']+ '\nhttps://google.com/maps/?q=' + str(lat) + ',' + sign + str(longtitude) )
 
             mapsURL = 'https://maps.googleapis.com/maps/api/staticmap?center=' + str(lat) + ',' + sign + str(longtitude) + '&zoom=6&markers=size:mid|color:red|' + str(lat) + ',' + sign + str(longtitude) + '&size=400x400&key=AIzaSyCXZwf5m5mM6dSa2FCvT63hdRp9JCXT_W8'
-            urllib.request.urlretrieve(mapsURL, './map.png')
+            urllib.request.urlretrieve(mapsURL, './test.png')
             # + \nLat : ' + str(x['geometry']['lat']) + ', Long : ' + str(x['geometry']['lng']))
             print("\ntweet : \n{}\n".format(tweet))
             api.update_with_media('/home/kevin/twitterBot/test.png', status = tweet, lat = lat , long = longtitude)
@@ -93,3 +94,6 @@ while count < 100:
     except json.decoder.JSONDecodeError:
         time.sleep(2)
         print("Funny word 2")
+
+
+
