@@ -5,7 +5,7 @@ Those words are then given to [what3words' API](https://docs.what3words.com/api/
 
 These are then given to [google maps static API](https://developers.google.com/maps/documentation/static-maps/) for the image
 
-It is then tweeted out
+It is then tweeted out through [tweepy](http://tweepy.readthedocs.io/en/v3.5.0/)
 
 
 This is a work in progress and as such not completed
